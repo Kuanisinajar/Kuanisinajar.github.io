@@ -1,30 +1,9 @@
 var myHeartIsEmpty = true ;
 var day = [];
 
+/* Daily Line */
 day[0] = [5, true, false, false, true];
-day[1] = [3, false, false, false, false];
-day[2] = [3, false, false, false, false];
-day[3] = [5, false, true, false, false];
-day[4] = [4, false, false, false, false];
-day[5] = [3, false, false, true, false];
-day[6] = [3, false, false, true, false];
-day[7] = [7, true, true, true, false];
-day[8] = [5, true, false, false, true];
-day[9] = [3, false, false, false, false];
-day[10] = [3, false, false, false, false];
-day[11] = [5, false, true, false, false];
-day[12] = [5, true, false, false, false];
-day[13] = [3, false, false, true, false];
-day[14] = [3, false, false, true, false];
-day[15] = [6, true, true, false, false];
-day[16] = [5, true, false, false, true];
-day[17] = [3, false, false, false, false];
-day[18] = [3, false, false, false, false];
-day[19] = [5, false, true, false, false];
-day[20] = [5, true, false, false, false];
-day[21] = [5, false, true, false, false];
-
-
+/* ------- */
 var totalDays = day.length;
 var dailyDots = document.getElementsByClassName('dots');
 var checkList = new Array(4);
@@ -159,7 +138,17 @@ var opening = function(){
 		$('.notification').fadeIn(1600, playSecondPartAnime);
 	});
 };
+var txtNum = 0;
+var clickClose = function(){
+	$('.title').hide();
+	$('.notification').show();
+	txtNum += 1;
+	if (txtNum === 1){
+		$('.welcome').on('click', function(){$(this).hide();});
+	}
+};
 var killWelcome = function(){
+	$('.welcome').on('click', function(){clickClose();});
 	setTimeout(opening, 2400);
 };
 /* Long Press*/
@@ -249,5 +238,8 @@ $(document).ready(
 		};
 		$('body').mousedown(function(){startCount();});
 		$('body').mouseup(function(){revert()});
+		$('body').on('touchstart', function(){startCount();});
+		$('body').on('touchend', function(){revert();});
+
 	}
 );

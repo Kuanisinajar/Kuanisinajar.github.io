@@ -2,7 +2,8 @@ var myHeartIsEmpty = true ;
 var day = [];
 
 /* Daily Line */
-day[0] = [5, true, false, false, true];
+/* [how I feel about today, did I make friends happy, did I have any achievement, did I see improvements of myself, did I like my self a little bit more] */
+day[0] = [7, true, true, true, true];
 /* ------- */
 var totalDays = day.length;
 var dailyDots = document.getElementsByClassName('dots');

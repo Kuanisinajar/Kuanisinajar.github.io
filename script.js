@@ -5,7 +5,9 @@ var day = [];
 /* [how I feel about today, did I make friends happy, did I have any achievement, did I see improvements of myself, did I like my self a little bit more] */
 day[0] = [7, true, true, true, true];
 day[1] = [6, true, false, false, false];
-
+day[2] = [6, true, false, false, false];
+day[3] = [6, true, false, false, false];
+day[4] = [4, false, false, false, false];
 
 /* ------- */
 var totalDays = day.length;

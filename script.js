@@ -33,6 +33,8 @@ day[26] = [5, false, false, false, false];
 day[27] = [5, false, false, false, false];
 day[28] = [5, false, false, false, false];
 day[29] = [5, false, false, false, false];
+day[30] = [6, false, false, true, false];
+day[31] = [6, false, true, false, false];
 /* ------- */
 var totalDays = day.length;
 var dailyDots = document.getElementsByClassName('dots');
@@ -98,7 +100,7 @@ var compare2 = function(){
 					a+=1;
 					iii++;
 					dailyValue[i-iii] -= a*0.002;
-					drainSpeed += a*0.0005;
+					drainSpeed += a*0.0001;
 				};
 				while (checkList[ii][i + iiii]===true){
 					b+=1;
@@ -107,7 +109,7 @@ var compare2 = function(){
 					drainSpeed -= b*0.001;
 				};
 				for (iiiii=0; iiiii < dailyDots.length; iiiii++){
-					dailyValue[iiiii] -= a*0.002;
+					dailyValue[iiiii] -= a*0.001;
 					dailyValue[iiiii] += b*0.002;
 				}
 				dailyValue[i] += a*0.001;
@@ -118,7 +120,9 @@ var compare2 = function(){
 };
 var drain = function(){
 	for (i=0; i < dailyDots.length; i++){
-		dailyValue[i] -= drainSpeed * (totalDays - i) * 0.01;
+		var d = drainSpeed;
+		if (d < 0) {d === 0};
+		dailyValue[i] -= d * (totalDays - i) * 0.01;
 	}
 };
 var paintDots = function(){

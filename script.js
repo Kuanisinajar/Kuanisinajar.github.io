@@ -42,6 +42,7 @@ day[35] = [7, true, false, true, false];
 day[36] = [7, true, false, false, true];
 day[37] = [6, false, false, false, false];
 day[38] = [7, false, false, false, true];
+day[39] = [6, false, false, true, false];
 /* ------- */
 var totalDays = day.length;
 var dailyDots = document.getElementsByClassName('dots');

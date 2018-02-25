@@ -60,6 +60,13 @@ day[53] = [6, false, false, false, false];
 day[54] = [6, true, false, false, false];
 day[55] = [6, true, false, false, false];
 day[56] = [6, false, false, true, false];
+day[57] = [5, false, false, false, false];
+day[58] = [5, false, false, false, false];
+day[59] = [4, false, false, false, false];
+day[60] = [5, true, false, false, false];
+day[61] = [5, false, false, false, false];
+day[62] = [5, false, false, false, false];
+day[63] = [5, true, false, false, false];
 
 /* ------- */
 var totalDays = day.length;

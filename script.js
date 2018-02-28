@@ -68,9 +68,13 @@ day[61] = [5, false, false, false, false];
 day[62] = [5, false, false, false, false];
 day[63] = [5, true, false, false, false];
 day[64] = [4, false, false, true, false];
-
+day[65] = [5, true, false, true, false];
 /* ------- */
 var totalDays = day.length;
+var dotsInline = '<div class=\'dots\'></div>';
+var makeDots = function(){
+	$('.dots-wrapper').html(dotsInline.repeat(totalDays));
+};
 var dailyDots = document.getElementsByClassName('dots');
 var checkList = new Array(4);
 checkList[0] = [];
@@ -219,25 +223,17 @@ var killWelcome = function(){
 	$('.welcome').on('click', function(){clickClose();});
 	setTimeout(opening, 2400);
 };
-/* Long Press*/
-var timer;
-var longPress = false;
-var timeDuration = 2100;
-var startCount = function(){
-	longPress = true;
-	timer = setTimeout(function(){callAbout();}, timeDuration);
-};
-var callAbout = function(){
-	if(timer){
-		clearTimeout(timer);
-	};
-	if(longPress){
-		$('.about').show();
-	}
-};
-var revert = function(){
-	longPress = false;
-};
+/* triple click and tap*/
+window.addEventListener('click', function (evt) {
+    if (evt.detail === 3) {
+        $('.about').show();
+    }
+});
+var getWindow = new Hammer.Manager(window);
+getWindow.add( new Hammer.Tap({ event: 'tripletap', taps: 3 }) );
+getWindow.on('tripletap', function(){
+	$('.about').show();
+});
 /* Change about and appendix */
 var appendix = function(){
 	$('.appendix').toggle();
@@ -291,6 +287,7 @@ var rules = function(){
 };
 $(document).ready(
 	function(){
+		makeDots();
 		killWelcome();
 		calcDailyValue();
 		buildList();
@@ -304,10 +301,5 @@ $(document).ready(
 		for(i=0; i < dailyDots.length; i++){
 			showLog(i);
 		};
-		$('body').mousedown(function(){startCount();});
-		$('body').mouseup(function(){revert()});
-		$('body').on('touchstart', function(){startCount();});
-		$('body').on('touchend', function(){revert();});
-
 	}
 );

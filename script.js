@@ -107,6 +107,11 @@ day[100] = [5, false, false, false, false];
 day[101] = [5, false, false, true, false];
 day[102] = [6, true, false, false, false];
 day[103] = [6, true, false, true, false];
+day[104] = [5, false, false, true, false];
+day[105] = [5, false, false, false, false];
+day[106] = [4, false, false, false, false];
+day[107] = [5, false, false, false, false];
+day[108] = [5, false, false, false, true];
 /* ------- */
 var totalDays = day.length;
 var dotsInline = '<div class=\'dots\'></div>';

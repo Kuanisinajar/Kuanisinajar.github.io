@@ -112,25 +112,39 @@ day[105] = [5, false, false, false, false];
 day[106] = [4, false, false, false, false];
 day[107] = [5, false, false, false, false];
 day[108] = [5, false, false, false, true];
-day[109] = [5, false, true, false, true];
-day[110] = [5, false, true, false, false];
-day[111] = [5, true, true, false, true];
-day[112] = [4, false, true, false, false];
-day[113] = [4, false, true, false, false];
-day[114] = [5, true, true, false, true];
-day[115] = [4, false, true, false, false];
-day[116] = [5, false, true, false, true];
-day[117] = [5, true, true, false, true];
-day[118] = [5, true, true, false, true];
-day[119] = [5, true, true, false, true];
-day[120] = [5, true, true, false, true];
-day[121] = [6, true, true, true, true];
+day[109] = [5, false, false, true, true];
+day[110] = [5, false, false, true, false];
+day[111] = [5, true, false, true, true];
+day[112] = [4, false, false, true, false];
+day[113] = [4, false, false, true, false];
+day[114] = [5, true, false, true, true];
+day[115] = [4, false, false, true, false];
+day[116] = [5, false, false, true, true];
+day[117] = [5, true, false, true, true];
+day[118] = [5, true, false, true, true];
+day[119] = [5, true, false, true, true];
+day[120] = [5, true, false, true, true];
+day[121] = [6, true, true, true, true]; 
 day[122] = [4, false, false, false, false];
-day[123] = [5, false, true, false, false];
+day[123] = [5, false, false, true, false];
 day[124] = [5, true, false, false, false];
 day[125] = [4, false, false, false, false];
-day[126] = [4, false, true, false, false];
-day[127] = [5, false, true, false, false];
+day[126] = [4, false, false, true, false];
+day[127] = [5, false, false, true, false];
+day[128] = [4, false, false, true, false];
+day[129] = [4, false, false, false, false];
+day[130] = [5, false, false, true, false];
+day[131] = [4, false, false, true, true];
+day[132] = [5, true, false, true, true];
+day[133] = [5, true, false, true, true];
+day[134] = [5, false, false, false, false];
+day[135] = [4, false, false, false, false];
+day[136] = [5, false, false, true, false];
+day[137] = [5, false, false, true, true];
+day[138] = [6, true, false, true, true];
+day[139] = [7, true, false, true, true];
+day[140] = [5, false, false, true, false];
+
 
 /* ------- */
 var totalDays = day.length;
@@ -173,6 +187,8 @@ var dailyBase = function(i){
 };
 var calcDrainSpeed = function(){
 	for (i=0; i < 4; i++){
+		if (i === 1) {break;}
+		if (i === 2) {continue;}
 		drainSpeed += checkList[i].filter(function(x){return !x;}).length * 0.001;
 		drainSpeed -= checkList[i].filter(function(x){return x;}).length * 0.001;
 	}

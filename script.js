@@ -144,6 +144,8 @@ day[137] = [5, false, false, true, true];
 day[138] = [6, true, false, true, true];
 day[139] = [7, true, false, true, true];
 day[140] = [5, false, false, true, false];
+day[141] = [4, false, false, true, false];
+day[141] = [4, false, false, true, false];
 
 
 /* ------- */

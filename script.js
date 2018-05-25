@@ -149,6 +149,13 @@ day[142] = [4, false, false, true, false];
 day[143] = [4, false, false, true, true];
 day[144] = [4, false, false, true, false];
 day[145] = [6, false, false, true, true];
+day[146] = [4, false, false, true, false];
+day[147] = [5, false, false, true, false];
+day[148] = [5, false, false, false, false];
+day[149] = [6, true, false, true, true];
+day[150] = [4, false, false, false, false];
+day[151] = [4, false, false, true, false];
+day[152] = [7, true, true, true, true];
 
 /* ------- */
 var totalDays = day.length;

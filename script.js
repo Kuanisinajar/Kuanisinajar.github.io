@@ -166,6 +166,13 @@ day[159] = [6, false, false, true, true];
 day[160] = [7, false, false, true, true];
 day[161] = [7, false, false, true, true];
 day[162] = [5, false, false, true, false];
+day[163] = [4, false, false, false, false];
+day[164] = [7, true, false, true, true];
+day[165] = [6, true, true, true, true];
+day[166] = [5, false, false, true, false];
+day[167] = [6, true, false, false, false];
+day[168] = [4, false, false, false, false];
+day[169] = [5, false, false, true, false];
 /* ------- */
 var totalDays = day.length;
 var dotsInline = '<div class=\'dots\'></div>';

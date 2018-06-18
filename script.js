@@ -176,6 +176,11 @@ day[169] = [5, false, false, true, false];
 day[170] = [7, true, true, true, true];
 day[171] = [5, false, false, false, true];
 day[172] = [5, false, false, false, true];
+day[173] = [4, false, false, false, false];
+day[174] = [6, true, false, true, true];
+day[175] = [5, false, false, false, false];
+day[176] = [7, true, false, false, true];
+day[177] = [5, false, false, false, false];
 /* ------- */
 var totalDays = day.length;
 var dotsInline = '<div class=\'dots\'></div>';

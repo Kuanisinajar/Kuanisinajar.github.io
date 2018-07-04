@@ -186,6 +186,17 @@ day[179] = [6, false, false, true, true];
 day[180] = [6, false, false, true, false];
 day[181] = [5, false, false, false, false];
 day[182] = [6, false, false, true, false];
+day[183] = [6, true, false, false, false];
+day[184] = [6, false, false, true, true];
+day[185] = [5, false, false, true, true];
+day[186] = [5, false, false, true, true];
+day[187] = [5, false, false, true, true];
+day[188] = [4, false, false, false, false];
+day[189] = [4, false, false, false, false];
+day[190] = [5, false, false, true, false];
+day[191] = [6, false, false, true, true];
+day[192] = [5, false, false, true, false];
+day[193] = [4, false, false, false, false];
 /* ------- */
 var totalDays = day.length;
 var dotsInline = '<div class=\'dots\'></div>';

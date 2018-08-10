@@ -227,6 +227,13 @@ day[220] = [5, false, false, true, true];
 day[221] = [6, false, false, true, true];
 day[222] = [4, false, false, true, true];
 day[223] = [4, false, false, true, true];
+day[224] = [6, false, false, true, true];
+day[225] = [6, false, false, true, true];
+day[226] = [7, false, false, true, true];
+day[227] = [6, false, false, true, true];
+day[228] = [4, false, false, true, true];
+day[229] = [5, false, false, true, false];
+day[230] = [6, false, false, true, true];
 /* ------- */
 var totalDays = day.length;
 var dotsInline = '<div class=\'dots\'></div>';
